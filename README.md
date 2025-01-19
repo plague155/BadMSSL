@@ -2,7 +2,7 @@
 This repo contains the implementation for the paper "BadMSSL: Audio Backdoor Attacks on Mask-Based Self-Supervised Learning".
 
 <p align="center">
-  <img src="overview_2.pdf" />
+  <img src="overview.bmp" />
   <br>
   <span>Figure 1: Overview of BadMSSL Audio Backdoor Attacks on Mask-Based Self-Supervised Learning.</span>
 </p>
