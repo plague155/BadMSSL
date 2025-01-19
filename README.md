@@ -48,14 +48,14 @@ python ./run.py  --main_task user_finetune
 
 ## Parameters
 There are several parameters in our configuration file:
- - `PMC`:Percentage of malicious clients.
- - `trigger_pattern`:Number of trigger partition.
- - `setting`:Trigger shape.
- - `local_epoch`:Default client training rounds per round.
- - `poison_internal_poison_epochs`:Malicious clients have training rounds per round.
- - `scale_weights_poison`:Malicious client amplifies parameters.
- - `num_select_clients`:Number of selected clients per round.
- - `X_poison_epochs`:The X-th type trigger malicious client adds a round.
- - `dirichlet_alpha`:If you choose to partition the client using the Dirichlet distribution, this is the coefficient.
- - `target_label`:Malicious client target label.
+ - `fshape`:The side length of the patch on the frequency dimension.
+ - `fstride`:The stride of patch spliting on the frequency dimension, for 16*16 patchs, fstride=16 means no overlap, fstride=10 means overlap of 6.
+ - `input_fdim`:The number of frequency bins of the input spectrogram.
+ - `input_tdim`:The number of time frames of the input spectrogram.
+ - `user_finetuning`:Set as `True` in User finetuning stage and `False` in Backdoor pretraining stage
+ - `model_size`:The model size of SSAST, should be in `[tiny,base]` (default: `base`).
+ - `target_label`:The backdoor target class.
+ - `n_epochs`:The number of training epoch.
+ - `lambda1`:The weight of loss term L1.
+ - `lambda2`:The weight of loss term L2.
 
